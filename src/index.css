@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/* html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+} */
+
+
+.bg-top-center {
+  background-position: top center;
+}
+
+.gradient-top-border {
+  position: relative;
+}
+
+.gradient-top-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, transparent, rgba(244, 247, 72, 0.4), transparent);
+}
+
+.gradient-top-bottom-border {
+  position: relative;
+}
+
+.gradient-top-bottom-border::before,
+.gradient-top-bottom-border::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(244, 247, 72, 0.4), transparent);
+}
+
+.gradient-top-bottom-border::before {
+  top: 0;
+}
+
+.gradient-top-bottom-border::after {
+  bottom: 0;
+}
+
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: slow-spin 8s linear infinite;
+}
+
+/* global.css */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(250, 204, 21, 0.7); /* yellow */
+  border-radius: 10px;
+}

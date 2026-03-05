@@ -17,7 +17,7 @@ const Navbar = ({ setCartOpen }) => {
   const [searchOpen, setSearchOpen] = useState(false);
   const navigate = useNavigate();
   const totalQty = useSelector((state) => state.cart.totalQty);
-  const isLogin = localStorage.getItem("isLogin")
+  const isLogin = typeof window !== "undefined" ? localStorage.getItem("isLogin") : null;
   return (
     <>
       <header className="sticky top-0 z-50 bg-black/70 backdrop-blur-xl">
